@@ -68,3 +68,9 @@
 .btn-rsvp:active {
   background: #025ec3;
 }
+
+.form-error {
+  color: red;
+  margin-bottom: 8px;
+  margin-top: -8px;
+}

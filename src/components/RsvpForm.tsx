@@ -18,7 +18,7 @@ export const RsvpForm = (props: Props) => {
             setStatusError('');
             return history.push(`/invited/${code}`)
         } else {
-            return setStatusError('Sorry, doesn\'t look like the right code')
+            return setStatusError('Hmm.. we don\'t recognize this code.');
         }
     };
 
@@ -32,7 +32,7 @@ export const RsvpForm = (props: Props) => {
                         <form onSubmit={checkReservation} className='rsvp-form'>
                             <label htmlFor="findRSVP" className='form-label'>Enter your invitation code</label><br />
                             <input type="text" id='findRSVP' className='textfield'name='code' onChange={(e: any)=> { setCode(e.target.value)}}/>
-                                {!invited && <div>{statusError}</div>}
+                                {!invited && <div className='form-error'>{statusError}</div>}
                             <input type="submit" value="Check code" className='btn btn-rsvp'/>
                         </form>
                     </div>
